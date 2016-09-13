@@ -1,0 +1,71 @@
+// HEADER
+.my-name {
+  text-align: center;
+}
+.social-media {
+  text-align: center;
+
+  .sm-link {
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    padding: 0 10px;
+    &:nth-child(2) {
+      border-left: 1px solid rgba(0,0,0,0.3);
+      border-right: 1px solid rgba(0,0,0,0.3);
+    }
+  }
+}
+.description {
+    width: 50%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    color: #828282;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    p {
+      position: relative;
+      span {
+        font-weight: bold;
+        color: #f8bd01;
+      }
+      &:before {
+        content: "{";
+        position: absolute;
+        font-size: 8em;
+        top: -40px;
+        left: -50px;
+        color: #f8bd01;
+        @include media-query($on-palm) {
+          top: -50px;
+          left: 0px;
+          color: rgba(248,189,1, 0.5);
+          z-index: -1;
+        }
+      }
+      &:after {
+        content: "}";
+        position: absolute;
+        font-size: 8em;
+        top: -40px;
+        right: -50px;
+        color: #f8bd01;
+        @include media-query($on-palm) {
+          top: -50px;
+          right: 0px;
+          color: rgba(248,189,1, 0.5);
+          z-index: -1;
+        }
+      }
+    }
+    @include media-query($on-palm) {
+      width: 100%;
+    }
+}
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+}
